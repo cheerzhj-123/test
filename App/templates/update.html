@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/update/" method="POST" enctype="multipart/form-data">
+
+    头像：<input type="file" name="head">
+    <hr>
+
+    性别：
+    <select name="gender">
+        <option value="male" {% if info.gender == "male" %}selected{% endif %} >小哥哥</option>
+        <option value="female" {% if info.gender == "female" %}selected{% endif %} >小姐姐</option>
+    </select>
+    <hr>
+
+    生日：
+    <input type="date" name="birthday" value="{{ info.birthday }}">
+    <hr>
+
+    城市：
+    <input type="text" name="city" value="{{ info.city }}">
+    <hr>
+
+    简介：
+    <input type="text" name="description" value="{{ info.description }}">
+    <hr>
+
+    <input type="hidden" name="id" value="{{ stu_id }}">
+
+    <input type="submit" name="提交">
+</form>
+</body>
+</html>

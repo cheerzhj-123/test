@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    .alignleft {
+        display: inline;
+        float: left;
+        }
+</style>
+</head>
+
+<body>
+
+
+<img src='/static/img/{{ stu_id }}.jpg' width="100px" class="alignleft">
+<ul>
+
+    <li>学号：{{ stu_id }}</li>
+    <li>性别：{{ info.gender }}</li>
+    <li>生日：{{ info.birthday }}</li>
+    <li>城市：{{ info.city }}</li>
+    <li>简介：{{ info.description }}</li>
+</ul>
+<a href="/update?id={{ stu_id }}">修改用户信息</a>
+</body>
+</html>
